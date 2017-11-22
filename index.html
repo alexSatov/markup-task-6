@@ -7,12 +7,31 @@
 </head>
 <body>
     <div class="layout">
+        <input class="visiting-control" type="checkbox" name="control" id="v" checked="checked">
+        <input class="jokes-control" type="checkbox" name="control" id="j" checked="checked">
+        <input class="tv-control" type="checkbox" name="control" id="t" checked="checked">
+        <input class="auto-control" type="checkbox" name="control" id="a" checked="checked">
+        <input class="weather-control" type="checkbox" name="control" id="w" checked="checked">
+        <input class="traffic-control" type="checkbox" name="control" id="f" checked="checked">
+        <input class="map-control" type="checkbox" name="control" id="m" checked="checked">
+        <input class="affiche-control" type="checkbox" name="control" id="h" checked="checked">
         <div class="geo">
             <a href="https://goo.gl/HG3xGW" class="transparent geo">Екатеринбург</a>
         </div>
         <h1 class="yandex">Яндекс</h1>
         <div class="menu">
-            <div class="settings">Настройка</div>
+            <label class="settings-button" for="set">Настройка</label>
+            <input class="settings" type="checkbox" name="settings" id="set">
+            <div class="settings">
+                <label class="control visiting-control" for="v">Посещаемое</label>
+                <label class="control jokes-control" for="j">Лучшие анекдоты</label>
+                <label class="control tv-control" for="t">Телепрограмма</label>
+                <label class="control auto-control" for="a">Автомобильные новости</label>
+                <label class="control weather-control" for="w">Погода</label>
+                <label class="control traffic-control" for="f">Пробки</label>
+                <label class="control map-control" for="m">Карта Екатеринбурга</label>
+                <label class="control affiche-control" for="h">Афиша</label>
+            </div>
             <div class="mail">
                 <span class="yandex">a</span><a
                     href="https://passport.yandex.ru/profile"
@@ -299,7 +318,7 @@
                 <div class="third">
                     <div class="weather widget">
                         <a href="https://goo.gl/AdtBVY" class="head">
-                            Погода <span class="head weather">−3 °C</span>
+                            Погода <span class="head weather-icon">−3 °C</span>
                         </a>
                         <div class="content">
                             <p>
@@ -310,7 +329,7 @@
                     </div>
                     <div class="traffic widget">
                         <a href="https://yandex.ru/maps/54/yekaterinburg/probki" class="head">
-                            Пробки <span class="head traffic">1 балл</span>
+                            Пробки <span class="head traffic-icon">1 балл</span>
                         </a>
                         <div class="content">
                             <p>

@@ -5,37 +5,14 @@ html
     min-width: 1000px;
 }
 
+input
+{
+    display: none;
+}
+
 a
 {
     text-decoration: none;
-}
-
-span.yandex
-{
-    color: red;
-    font-weight: bold;
-}
-
-span.weather
-{
-    background-image: url(https://pp.userapi.com/c840121/v840121243/46949/9ue1A8VNbLk.jpg);
-    background-repeat: no-repeat;
-    padding-left: 40px;
-}
-
-span.traffic
-{
-    background-image: url(https://pp.userapi.com/c840536/v840536608/28659/3M78TBWKtPM.jpg);
-    background-repeat: no-repeat;
-    padding-left: 35px;
-}
-
-a:hover,
-a:hover > .transparent,
-a:hover > .head,
-.yandex::first-letter
-{
-    color: red;
 }
 
 ul
@@ -48,10 +25,35 @@ li
     margin-bottom: 10px;
 }
 
-.cloud
+span.yandex
 {
-    width: 3rem;
-    height: 2.6rem;
+    color: red;
+    font-weight: bold;
+}
+
+a:hover,
+a:hover > .transparent,
+a:hover > .head,
+.more:hover,
+.control:hover,
+.settings-button:hover,
+.yandex::first-letter
+{
+    color: red;
+}
+
+.weather-icon
+{
+    background-image: url(https://pp.userapi.com/c840121/v840121243/46949/9ue1A8VNbLk.jpg);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+.traffic-icon
+{
+    background-image: url(https://pp.userapi.com/c840536/v840536608/28659/3M78TBWKtPM.jpg);
+    background-repeat: no-repeat;
+    padding-left: 35px;
 }
 
 .classic
@@ -127,7 +129,7 @@ a.geo:hover::before
     justify-content: flex-end;
 }
 
-.settings
+.settings-button
 {
     font-size: 1.4rem;
     margin-top: 10px;
@@ -225,13 +227,16 @@ h1.yandex
 .second,
 .third
 {
+    width: 27rem;
     margin-right: 40px;
+    display: none;
 }
 
 .widget
 {
     width: 270px;
     margin-bottom: 30px;
+    display: none;
 }
 
 .jokes .content
@@ -249,7 +254,6 @@ h1.yandex
 }
 
 .more,
-.slider,
 .joke
 {
     display: none;
@@ -300,4 +304,62 @@ h1.yandex
     -webkit-margin-after: 8px;
     -webkit-margin-before: 8px;
     margin-right: 15px;
+}
+
+.settings,
+.widget
+{
+    display: none;
+}
+
+input.settings:checked + .settings
+{
+    display: block;
+    font-size: 1.4rem;
+    position: fixed;
+    top: 50px;
+    right: 150px;
+    line-height: 2.5rem;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .3);
+}
+
+.control::before
+{
+    content: url(https://pp.userapi.com/c834404/v834404763/31fb0/yEJlgQXCv3I.jpg);
+    padding-right: 8px;
+}
+
+.visiting-control:checked ~ .menu .visiting-control::before,
+.jokes-control:checked ~ .menu .jokes-control::before,
+.tv-control:checked ~ .menu .tv-control::before,
+.auto-control:checked ~ .menu .auto-control::before,
+.weather-control:checked ~ .menu .weather-control::before,
+.traffic-control:checked ~ .menu .traffic-control::before,
+.map-control:checked ~ .menu .map-control::before,
+.affiche-control:checked ~ .menu .affiche-control::before
+{
+    content: url(https://pp.userapi.com/c834404/v834404763/31fa9/K8rni2Iqhmo.jpg);
+}
+
+.control,
+.visiting-control:checked ~ main .first,
+.jokes-control:checked ~ main .first,
+.tv-control:checked ~ main .second,
+.auto-control:checked ~ main .second,
+.weather-control:checked ~ main .third,
+.traffic-control:checked ~ main .third,
+.map-control:checked ~ main .third,
+.affiche-control:checked ~ main .third,
+.visiting-control:checked ~ main .visiting,
+.jokes-control:checked ~ main .jokes,
+.tv-control:checked ~ main .tv,
+.auto-control:checked ~ main .auto,
+.weather-control:checked ~ main .weather,
+.traffic-control:checked ~ main .traffic,
+.map-control:checked ~ main .map,
+.affiche-control:checked ~ main .affiche
+{
+    display: block;
 }
